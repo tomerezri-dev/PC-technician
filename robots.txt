@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tomerezri-dev.github.io/PC-technician/sitemap.xml
