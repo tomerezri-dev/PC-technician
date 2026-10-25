@@ -13,9 +13,9 @@ computer illustration in the hero automatically; until then the illustration is 
 
 ## SEO
 - Target query: "טכנאי מחשבים בראשון לציון" (title, meta description, H1, H2s, LocalBusiness JSON-LD).
-- Canonical URL, `sitemap.xml` and `robots.txt` use https://tomerezri-dev.github.io/PC-technician/.
-  If you move to a custom domain, update the URL in `index.html` (canonical, og:url, JSON-LD),
-  `sitemap.xml` and `robots.txt`.
+- Live at https://tomer-pc.co.il/ (GitHub Pages custom domain; keep the `CNAME` file GitHub creates).
+- Canonical URLs, og:url, JSON-LD, `sitemap.xml` and `robots.txt` all use https://tomer-pc.co.il/.
+  If the domain ever changes, update it in `index.html`, `business.html`, `sitemap.xml` and `robots.txt`.
 - Google Search Console verification: paste the meta tag where the comment in `<head>` says so.
 
 ## Files

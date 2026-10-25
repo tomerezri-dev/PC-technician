@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tomerezri-dev.github.io/PC-technician/sitemap.xml
+Sitemap: https://tomer-pc.co.il/sitemap.xml
