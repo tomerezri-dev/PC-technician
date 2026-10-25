@@ -1,8 +1,8 @@
 // Business contact details – edit these and every link on the page updates.
 const CONFIG = {
-  phoneDisplay: "050-000-0000",
-  phoneIntl: "972500000000", // country code + number, no leading 0 or "+"
-  email: "info@example.com",
+  phoneDisplay: "052-6743939",
+  phoneIntl: "972526743939", // country code + number, no leading 0 or "+"
+  email: "Tomerezri@gmail.com",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
