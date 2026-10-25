@@ -17,13 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Show the portrait in the hero once images/tomer.jpg exists; otherwise keep the illustration
   const portrait = document.querySelector(".portrait");
-  const portraitImg = portrait.querySelector("img");
-  const showPortrait = () => {
-    portrait.hidden = false;
-    document.querySelector(".hero").classList.add("has-photo");
-  };
-  if (portraitImg.complete && portraitImg.naturalWidth) showPortrait();
-  else portraitImg.addEventListener("load", showPortrait);
+  if (portrait) {
+    const portraitImg = portrait.querySelector("img");
+    const showPortrait = () => {
+      portrait.hidden = false;
+      document.querySelector(".hero").classList.add("has-photo");
+    };
+    if (portraitImg.complete && portraitImg.naturalWidth) showPortrait();
+    else portraitImg.addEventListener("load", showPortrait);
+  }
 
   // Mobile nav
   const toggle = document.querySelector(".nav-toggle");
@@ -60,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = form.elements.name.value.trim();
     const phone = form.elements.phone.value.trim();
     const issue = form.elements.issue.value.trim();
+    const company = form.elements.company ? form.elements.company.value.trim() : "";
 
     form.elements.name.classList.toggle("invalid", !name);
     form.elements.phone.classList.toggle("invalid", !/^[\d\s+\-()]{9,}$/.test(phone));
@@ -68,7 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const text = `שלום תומר, שמי ${name}.\nטלפון: ${phone}${issue ? `\nהבעיה: ${issue}` : ""}`;
+    const text = form.hasAttribute("data-business")
+      ? `שלום תומר, פנייה בנושא שירותי IT לעסק.\nשמי ${name}${company ? `, מהעסק ${company}` : ""}.\nטלפון: ${phone}${issue ? `\nבמה צריך עזרה: ${issue}` : ""}`
+      : `שלום תומר, שמי ${name}.\nטלפון: ${phone}${issue ? `\nהבעיה: ${issue}` : ""}`;
     window.open(`https://wa.me/${CONFIG.phoneIntl}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
     note.textContent = "תודה! אחזור אליך בהקדם.";
     form.reset();

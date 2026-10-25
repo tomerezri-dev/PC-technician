@@ -1,6 +1,6 @@
 # תומר עזרי – טכנאי מחשבים
 
-Static one-page business website (Hebrew, RTL). No build step: open `index.html` in a browser,
+Static business website (Hebrew, RTL). No build step: open `index.html` in a browser,
 or host the folder on GitHub Pages / Netlify / any static host.
 
 ## Updating contact details
@@ -19,7 +19,8 @@ computer illustration in the hero automatically; until then the illustration is 
 - Google Search Console verification: paste the meta tag where the comment in `<head>` says so.
 
 ## Files
-- `index.html` – page content
+- `index.html` – home page (residential customers)
+- `business.html` – "שירותי IT לעסקים קטנים בראשון לציון" (business customers)
 - `styles.css` – design (light/dark mode, responsive)
 - `script.js` – contact details, mobile menu, scroll animations, portrait loader, contact form → WhatsApp
 - `sitemap.xml`, `robots.txt` – for search engines

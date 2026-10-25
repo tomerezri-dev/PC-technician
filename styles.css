@@ -347,3 +347,43 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
   .portrait { order: 1; max-width: 240px; }
 }
 .card-wide { grid-column: 1 / -1; }
+
+/* Residential: how service is delivered */
+.sub-head { text-align: center; font-size: 1.4rem; font-weight: 800; margin: 56px 0 22px; }
+.options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.option {
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px;
+}
+.option strong { display: block; font-size: 1.1rem; margin-bottom: 6px; }
+.option p { margin: 0; color: var(--muted); }
+
+/* Business teaser on the home page */
+.biz-band { background: linear-gradient(160deg, var(--hero-from), var(--hero-to)); color: #fff; padding: 56px 0; }
+.biz-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.biz-band h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; }
+.biz-band p { color: #c9d6ec; margin: 0; max-width: 40em; }
+.biz-band .btn { flex-shrink: 0; }
+.site-nav a.nav-business { color: var(--primary); font-weight: 700; }
+
+/* Business page: price summary card in the hero */
+.hero-card {
+  background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 20px; padding: 28px; backdrop-filter: blur(6px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .35); max-width: 420px; width: 100%; justify-self: center;
+}
+.hero-card h2 { font-size: 1.25rem; font-weight: 800; margin-bottom: 14px; }
+.hero-card ul { list-style: none; padding: 0; margin: 0 0 16px; }
+.hero-card li {
+  display: flex; justify-content: space-between; gap: 16px; padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .12); color: #c9d6ec;
+}
+.hero-card li strong { color: #fff; white-space: nowrap; }
+.hero-card a { color: #3be0d0; font-weight: 700; }
+
+@media (max-width: 960px) {
+  .options { grid-template-columns: 1fr; }
+  .biz-band-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 760px) {
+  .biz-band .btn { width: 100%; }
+}
