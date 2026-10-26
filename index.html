@@ -51,6 +51,20 @@
       { "@type": "City", "name": "רמת גן" },
       { "@type": "City", "name": "גבעתיים" }
     ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "09:30",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "09:30",
+        "closes": "13:00"
+      }
+    ],
     "knowsAbout": ["תיקון מחשבים", "MacBook", "macOS", "Windows", "Microsoft 365", "הסרת וירוסים", "שחזור מידע", "רשתות Wi-Fi"],
     "makesOffer": [
       { "@type": "Offer", "name": "ביקור בית ואבחון תקלה", "price": "250", "priceCurrency": "ILS" },
@@ -133,7 +147,7 @@
 
         <figure class="portrait">
           <picture>
-            <source type="image/webp" srcset="images/tomer-240.webp 240w, images/tomer-380.webp 380w" sizes="(max-width: 760px) 240px, (max-width: 960px) 280px, 360px">
+            <source type="image/webp" srcset="images/tomer-240.webp 240w, images/tomer-380.webp 380w, images/tomer-512.webp 512w" sizes="(max-width: 760px) 240px, (max-width: 960px) 280px, 360px">
             <img src="images/tomer-380.jpg" alt="תומר עזרי – טכנאי מחשבים בראשון לציון" width="380" height="475" decoding="async" fetchpriority="high">
           </picture>
           <figcaption><strong>תומר עזרי</strong><span>טכנאי מחשבים · ראשון לציון</span></figcaption>
@@ -427,6 +441,10 @@
             <p>הבסיס שלי בראשון לציון. ביקורים אני מקיים בראשון לציון, חולון, בת ים, נס ציונה ובאר יעקב. ברחובות, רמלה, לוד, תל אביב-יפו, רמת גן וגבעתיים – בתיאום מראש, בהתאם לזמינות ולסוג העבודה. בביקור בבית או בעסק עשויה לחול תוספת נסיעה, בהתאם לכתובת ולזמן הנסיעה – גם באזורי השירות העיקריים. לפני שתאשרו את הביקור תקבלו את המחיר הכולל. תמיכה מרחוק אינה תלויה במיקום. <a href="#area">לפרטים</a></p>
           </details>
           <details>
+            <summary>מה שעות הפעילות?</summary>
+            <p>ימים א׳–ה׳ <span dir="ltr">09:30–18:00</span>, יום ו׳ <span dir="ltr">09:30–13:00</span>, שבת סגור. ביקורים נקבעים בתיאום מראש. מחוץ לשעות הפעילות אפשר לשלוח הודעה או להתקשר כדי לתאם שירות – בהתאם לזמינות.</p>
+          </details>
+          <details>
             <summary>האם המחיר זהה בכל כתובת?</summary>
             <p>לא בהכרח. המחירים במחירון הם לשירות עצמו. בביקור בבית או בעסק עשויה לחול תוספת נסיעה, בהתאם לכתובת ולזמן הנסיעה – גם באזורי השירות העיקריים. לפני שתאשרו את הביקור תקבלו את המחיר הכולל. תמיכה מרחוק מתומחרת לפי המחירון, בלי קשר למיקום.</p>
           </details>
@@ -472,7 +490,7 @@
             </li>
             <li>
               <span class="ci-icon" aria-hidden="true">🕘</span>
-              <span>שירות בתיאום מראש</span>
+              <span>א׳–ה׳: <span dir="ltr">09:30–18:00</span><br>ו׳: <span dir="ltr">09:30–13:00</span><br>שבת: סגור<small class="hours-note">מחוץ לשעות הפעילות אפשר לפנות כדי לתאם שירות, בהתאם לזמינות.</small></span>
             </li>
             <li>
               <span class="ci-icon" aria-hidden="true">📍</span>

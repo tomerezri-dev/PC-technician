@@ -8,9 +8,9 @@ Edit the `CONFIG` object at the top of `script.js` (phone, WhatsApp number, emai
 Opening hours are in the contact section of `index.html`.
 
 ## Portrait photo
-The hero shows `images/tomer-240.webp` / `images/tomer-380.webp` (phones get the small one) with
-`images/tomer-380.jpg` as fallback. To replace the photo, regenerate all three at the same sizes
-(4:5 crop, metadata stripped).
+The hero shows `images/tomer-240.webp` / `-380.webp` / `-512.webp` (the browser picks the size it
+needs) with `images/tomer-380.jpg` as fallback. To replace the photo, regenerate all four at the same
+sizes (4:5 crop, metadata stripped).
 
 ## SEO
 - Target query: "טכנאי מחשבים בראשון לציון" (title, meta description, H1, H2s, LocalBusiness JSON-LD).
