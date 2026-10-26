@@ -201,6 +201,7 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
 .footer-inner p { margin: 0; }
 .footer-inner a { color: #c9d6ec; }
+.footer-inner .footer-hours { flex-basis: 100%; order: 3; font-size: .9rem; }
 
 /* Floating WhatsApp */
 .whatsapp-float {
