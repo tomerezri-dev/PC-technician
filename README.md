@@ -18,6 +18,13 @@ computer illustration in the hero automatically; until then the illustration is 
   If the domain ever changes, update it in `index.html`, `business.html`, `sitemap.xml` and `robots.txt`.
 - Google Search Console verification: paste the meta tag where the comment in `<head>` says so.
 
+## Prices
+Prices appear in several places – keep them in sync when they change:
+- `index.html`: price cards (#pricing), MacBook section, FAQ, and `makesOffer`/`priceRange` in the JSON-LD
+- `business.html`: hero price card, price cards (#it-pricing), FAQ, and `offers` in the JSON-LD
+
+The free offer is only the initial consultation by phone/WhatsApp ("אבחון ראשוני בטלפון או בוואטסאפ – ללא עלות").
+
 ## Files
 - `index.html` – home page (residential customers)
 - `business.html` – "שירותי IT לעסקים קטנים בראשון לציון" (business customers)
