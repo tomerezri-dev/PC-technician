@@ -15,18 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Show the portrait in the hero once images/tomer.jpg exists; otherwise keep the illustration
-  const portrait = document.querySelector(".portrait");
-  if (portrait) {
-    const portraitImg = portrait.querySelector("img");
-    const showPortrait = () => {
-      portrait.hidden = false;
-      document.querySelector(".hero").classList.add("has-photo");
-    };
-    if (portraitImg.complete && portraitImg.naturalWidth) showPortrait();
-    else portraitImg.addEventListener("load", showPortrait);
-  }
-
   // Mobile nav
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.getElementById("site-nav");

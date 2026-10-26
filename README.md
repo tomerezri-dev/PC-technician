@@ -8,8 +8,9 @@ Edit the `CONFIG` object at the top of `script.js` (phone, WhatsApp number, emai
 Opening hours are in the contact section of `index.html`.
 
 ## Portrait photo
-Upload a photo as `images/tomer.jpg` (portrait, about 4:5, under ~300 KB). It replaces the
-computer illustration in the hero automatically; until then the illustration is shown.
+The hero shows `images/tomer-240.webp` / `images/tomer-380.webp` (phones get the small one) with
+`images/tomer-380.jpg` as fallback. To replace the photo, regenerate all three at the same sizes
+(4:5 crop, metadata stripped).
 
 ## SEO
 - Target query: "טכנאי מחשבים בראשון לציון" (title, meta description, H1, H2s, LocalBusiness JSON-LD).
