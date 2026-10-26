@@ -461,3 +461,5 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 .area-note { text-align: center; color: var(--muted); max-width: 780px; margin: 22px auto 0; }
 .contact-list a[href^="#"] { color: #3be0d0; }
 @media (max-width: 760px) { .area-grid { grid-template-columns: 1fr; } }
+.options.options-2 { grid-template-columns: repeat(2, 1fr); max-width: 780px; margin: 0 auto; }
+@media (max-width: 960px) { .options.options-2 { grid-template-columns: 1fr; } }
