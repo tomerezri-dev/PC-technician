@@ -1,7 +1,7 @@
 // Business contact details – edit these and every link on the page updates.
 const CONFIG = {
-  phoneDisplay: "052-6743939",
-  phoneIntl: "972526743939", // country code + number, no leading 0 or "+"
+  phoneDisplay: "055-266-7254",
+  phoneIntl: "972552667254", // country code + number, no leading 0 or "+"
   email: "Tomerezri@gmail.com",
 };
 
