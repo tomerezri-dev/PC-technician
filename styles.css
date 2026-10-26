@@ -105,36 +105,6 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 22px; }
 .hero-badges { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; color: #c9d6ec; font-weight: 500; }
 
-.hero-visual { display: flex; flex-direction: column; align-items: center; }
-.screen {
-  width: 100%; max-width: 420px; border-radius: 14px; overflow: hidden;
-  background: #0a1426; border: 2px solid #2a4675;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, .45), 0 0 0 8px rgba(255, 255, 255, .04);
-}
-.screen-bar { display: flex; gap: 6px; padding: 10px 12px; background: #13233f; direction: ltr; }
-.screen-bar i { width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; }
-.screen-bar i:nth-child(2) { background: #febc2e; }
-.screen-bar i:nth-child(3) { background: #28c840; }
-.screen-body { position: relative; padding: 22px 22px 26px; min-height: 230px; }
-.mono { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; margin: 0 0 .45em; color: #8fb4ff; opacity: 0; animation: typeIn .4s forwards; }
-.mono:nth-of-type(1) { animation-delay: .3s; }
-.mono:nth-of-type(2) { animation-delay: 1s; }
-.mono:nth-of-type(3) { animation-delay: 1.6s; }
-.mono:nth-of-type(4) { animation-delay: 2.2s; }
-.mono:nth-of-type(5) { animation-delay: 2.9s; }
-.mono:nth-of-type(6) { animation-delay: 3.6s; }
-.mono.ok { color: #4ee2a0; }
-.mono.warn { color: #ffcf5a; }
-.mono.big { font-family: inherit; font-size: 1.3rem; font-weight: 800; color: #fff; margin-top: .8em; }
-.scan-line {
-  position: absolute; inset-inline: 0; top: 0; height: 2px;
-  background: linear-gradient(90deg, transparent, #3be0d0, transparent);
-  animation: scan 3.5s linear infinite; opacity: .6;
-}
-.screen-stand { width: 120px; height: 18px; background: #2a4675; border-radius: 0 0 10px 10px; margin-top: -2px; }
-
-@keyframes typeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
-@keyframes scan { from { top: 0; } to { top: 100%; } }
 
 /* Sections */
 .section { padding: 90px 0; }
@@ -248,8 +218,6 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .mono { animation: none; opacity: 1; }
-  .scan-line { display: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
@@ -257,8 +225,6 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 @media (max-width: 960px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
   .hero-inner, .why-inner, .contact-inner { grid-template-columns: 1fr; }
-  .hero-visual { order: -1; }
-  .screen { max-width: 360px; }
 }
 
 @media (max-width: 760px) {
@@ -277,26 +243,11 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 
   .container { padding: 0 16px; }
   .hero { padding: 48px 0 64px; }
-  .hero-visual { display: none; }
   .hero-actions .btn { flex: 1 1 100%; }
   .section { padding: 64px 0; }
   .cards, .steps { grid-template-columns: 1fr; }
   .contact-form { padding: 24px; }
 }
-
-/* Pricing */
-.price-list {
-  list-style: none; padding: 0; margin: 0;
-  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
-}
-.price-list li {
-  display: flex; justify-content: space-between; align-items: center; gap: 16px;
-  padding: 16px 24px; border-bottom: 1px solid var(--border);
-}
-.price-list li:last-child { border-bottom: 0; }
-.price-list strong { color: var(--primary); white-space: nowrap; }
-.price-note { text-align: center; color: var(--muted); font-size: .95rem; margin: 18px 0 0; }
-@media (max-width: 760px) { .price-list li { padding: 14px 16px; } }
 
 /* Location line inside the H1 */
 .h1-kicker {
@@ -464,3 +415,17 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 .options.options-2 { grid-template-columns: repeat(2, 1fr); max-width: 780px; margin: 0 auto; }
 @media (max-width: 960px) { .options.options-2 { grid-template-columns: 1fr; } }
 .hours-note { display: block; color: #c9d6ec; font-size: .9rem; margin-top: 2px; }
+
+/* Business page: about band */
+.about-inner { display: flex; align-items: center; gap: 32px; }
+.about-photo { flex-shrink: 0; }
+.about-photo img {
+  width: 160px; height: 200px; object-fit: cover; border-radius: 16px;
+  border: 2px solid #2a4675; box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+}
+.about-band p { max-width: 46em; }
+@media (max-width: 760px) {
+  .about-inner { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .about-photo img { width: 120px; height: 150px; }
+}
+.nowrap { white-space: nowrap; }
