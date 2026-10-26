@@ -444,3 +444,20 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
   .whatsapp-float { display: none; }
   body { padding-bottom: 72px; }
 }
+
+/* Service area */
+.area-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.area-box { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px; }
+.section-alt .area-box { background: var(--surface); }
+.area-box.area-primary { border-color: var(--primary); }
+.area-box h3 { font-size: 1.15rem; margin-bottom: 4px; }
+.area-box p { margin: 0 0 14px; color: var(--muted); }
+.area-chips { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.area-chips li {
+  padding: .35em .9em; border-radius: 999px; font-weight: 500;
+  background: var(--surface); border: 1px solid var(--border);
+}
+.area-primary .area-chips li { background: var(--primary); border-color: var(--primary); color: #fff; }
+.area-note { text-align: center; color: var(--muted); max-width: 780px; margin: 22px auto 0; }
+.contact-list a[href^="#"] { color: #3be0d0; }
+@media (max-width: 760px) { .area-grid { grid-template-columns: 1fr; } }
