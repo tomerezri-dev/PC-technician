@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Apply contact details
   document.querySelectorAll(".js-phone").forEach((a) => (a.href = `tel:+${CONFIG.phoneIntl}`));
   document.querySelectorAll(".js-phone-text").forEach((a) => (a.textContent = CONFIG.phoneDisplay));
-  // WhatsApp buttons open with a starter message that matches the page
+  // WhatsApp buttons open with a starter message that matches the page (or the link's own data-wa-text)
   const isBusinessPage = !!document.querySelector("#contact-form[data-business]");
   const waStarter = isBusinessPage
     ? "שלום תומר, אשמח לשמוע על שירותי IT לעסק שלי."
     : "שלום תומר, אשמח לעזרה עם המחשב.";
   document.querySelectorAll(".js-whatsapp").forEach(
-    (a) => (a.href = `https://wa.me/${CONFIG.phoneIntl}?text=${encodeURIComponent(waStarter)}`)
+    (a) => (a.href = `https://wa.me/${CONFIG.phoneIntl}?text=${encodeURIComponent(a.dataset.waText || waStarter)}`)
   );
   document.querySelectorAll(".js-email").forEach((a) => (a.href = `mailto:${CONFIG.email}`));
   document.querySelectorAll(".js-email-text").forEach((a) => (a.textContent = CONFIG.email));

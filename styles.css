@@ -228,7 +228,8 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
   .hero-inner, .why-inner, .contact-inner { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 760px) {
+/* Collapsed menu below desktop width – the full menu no longer fits next to the logo */
+@media (max-width: 1023px) {
   .nav-toggle { display: block; }
   .site-nav {
     position: absolute; top: 68px; inset-inline: 0; flex-direction: column; gap: 0;
@@ -241,7 +242,9 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
 
+@media (max-width: 760px) {
   .container { padding: 0 16px; }
   .hero { padding: 48px 0 64px; }
   .hero-actions .btn { flex: 1 1 100%; }
