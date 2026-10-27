@@ -2,7 +2,6 @@
 const CONFIG = {
   phoneDisplay: "055-266-7254",
   phoneIntl: "972552667254", // country code + number, no leading 0 or "+"
-  email: "Tomerezri@gmail.com",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".js-whatsapp").forEach(
     (a) => (a.href = `https://wa.me/${CONFIG.phoneIntl}?text=${encodeURIComponent(a.dataset.waText || waStarter)}`)
   );
-  document.querySelectorAll(".js-email").forEach((a) => (a.href = `mailto:${CONFIG.email}`));
-  document.querySelectorAll(".js-email-text").forEach((a) => (a.textContent = CONFIG.email));
 
   document.getElementById("year").textContent = new Date().getFullYear();
 
