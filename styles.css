@@ -202,6 +202,7 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
 .footer-inner p { margin: 0; }
 .footer-inner a { color: #c9d6ec; }
 .footer-inner .footer-hours { flex-basis: 100%; order: 3; font-size: .9rem; }
+.footer-inner .footer-tagline { flex-basis: 100%; order: 3; font-weight: 700; color: #c9d6ec; }
 
 /* Floating WhatsApp */
 .whatsapp-float {
@@ -302,6 +303,8 @@ h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; }
   .portrait { order: 1; max-width: 240px; }
 }
 .card-wide { grid-column: 1 / -1; }
+.cards.cards-2 { grid-template-columns: repeat(2, 1fr); margin-top: 22px; }
+@media (max-width: 760px) { .cards.cards-2 { grid-template-columns: 1fr; } }
 
 /* Residential: how service is delivered */
 .sub-head { text-align: center; font-size: 1.4rem; font-weight: 800; margin: 56px 0 22px; }
