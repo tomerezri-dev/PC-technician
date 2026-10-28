@@ -28,6 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   toggle.addEventListener("click", () => setNav(!nav.classList.contains("open")));
   nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setNav(false)));
+  // Escape closes the menu and returns focus to the button; tabbing out of the menu closes it
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav.classList.contains("open")) {
+      setNav(false);
+      toggle.focus();
+    }
+  });
+  nav.addEventListener("focusout", (e) => {
+    if (nav.classList.contains("open") && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) setNav(false);
+  });
 
   // Reveal on scroll
   const revealEls = document.querySelectorAll(".card, .step, .stat, .faq details, .why-text, .contact-form");
@@ -56,10 +66,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const issue = form.elements.issue.value.trim();
     const company = form.elements.company ? form.elements.company.value.trim() : "";
 
-    form.elements.name.classList.toggle("invalid", !name);
-    form.elements.phone.classList.toggle("invalid", !/^[\d\s+\-()]{9,}$/.test(phone));
-    if (!name || !/^[\d\s+\-()]{9,}$/.test(phone)) {
-      note.textContent = "נא למלא שם ומספר טלפון תקין.";
+    // Mark invalid fields for screen readers and link them to the message
+    const nameOk = !!name;
+    const phoneOk = /^[\d\s+\-()]{9,}$/.test(phone);
+    [[form.elements.name, nameOk], [form.elements.phone, phoneOk]].forEach(([field, ok]) => {
+      field.classList.toggle("invalid", !ok);
+      field.setAttribute("aria-invalid", String(!ok));
+      if (ok) field.removeAttribute("aria-describedby");
+      else field.setAttribute("aria-describedby", "form-note");
+    });
+    if (!nameOk || !phoneOk) {
+      note.textContent = !nameOk && !phoneOk ? "נא למלא שם ומספר טלפון תקין."
+        : !nameOk ? "נא למלא שם." : "נא למלא מספר טלפון תקין (לפחות 9 ספרות).";
+      (nameOk ? form.elements.phone : form.elements.name).focus();
       return;
     }
 
@@ -69,5 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.open(`https://wa.me/${CONFIG.phoneIntl}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
     note.textContent = "תודה! אחזור אליך בהקדם.";
     form.reset();
+    [form.elements.name, form.elements.phone].forEach((f) => { f.removeAttribute("aria-invalid"); f.removeAttribute("aria-describedby"); });
   });
 });
